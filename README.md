@@ -18,7 +18,7 @@ Iterates through the list of columns, finding rows in one table but not the othe
 Please see complete documentation at:  https://www.bigqueryblog.com/post/bigquery-data-compare-stored-procedure
 
 -------------------
-##Example usage:
+## example usage:
 -------------------
 ```
 DECLARE my_source_table STRING;
