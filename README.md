@@ -3,21 +3,21 @@ Stored procedure, table definition and exampe to compare the data in one table a
 
  This stored procedure does the following:
 
-    *  Accepts the following input parameters:
-        *  source_table (STRING) -- supplied in format dataset.tablename
-        *  target_table (STRING) -- supplied in format dataset.tablename
-        *  key_col (STRING) -- this is either the name of a column to serve as a comparison key across both tables, or a comma-delimited list of columns for compound keys.  Project and/or dataset names are not added
+    -  Accepts the following input parameters:
+        -  source_table (STRING) -- supplied in format dataset.tablename
+        -  target_table (STRING) -- supplied in format dataset.tablename
+        -  key_col (STRING) -- this is either the name of a column to serve as a comparison key across both tables, or a comma-delimited list of columns for compound keys.  Project and/or dataset names are not added
     
-    *  Queries INFORMATION_SCHEMA to return a list of non-key columns to iterate through and compare between both tables.
+    -  Queries INFORMATION_SCHEMA to return a list of non-key columns to iterate through and compare between both tables.
     Iterates through the list of columns, finding rows in one table but not the other, or rows with different values in equivalent columns when joined across the keys.
-    *  Munges the results into summary information.
-    *  Creates a table in the source table's schema if not exists and stores the results of the comparison on the table, for future reference.
+    -  Munges the results into summary information.
+    -  Creates a table in the source table's schema if not exists and stores the results of the comparison on the table, for future reference.
 
 
 Please see complete documentation at:  https://www.bigqueryblog.com/post/bigquery-data-compare-stored-procedure
 
 -------------------
-Example usage:
+##Example usage:
 -------------------
 DECLARE my_source_table STRING;
 DECLARE my_target_table STRING;
